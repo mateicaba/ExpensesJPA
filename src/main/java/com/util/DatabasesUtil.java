@@ -7,10 +7,10 @@ import java.util.List;
  * A class that helps us to work with multiple connection of databases
  */
 public class DatabasesUtil {
-    private List<DatabaseUtil> databaes = new ArrayList<>();
+    private List<DatabaseUtil> databases = new ArrayList<>();
 
     public DatabasesUtil(List<DatabaseUtil> databaes) {
-        this.databaes = databaes;
+        this.databases = databaes;
     }
 
     public DatabasesUtil() {
@@ -42,11 +42,11 @@ public class DatabasesUtil {
     }
 
     public void AddDb(DatabaseUtil db) {
-        this.databaes.add(db);
+        this.databases.add(db);
     }
 
     public List<DatabaseUtil> getDatabases() {
-        return databaes;
+        return databases;
     }
 
     /***
@@ -55,15 +55,20 @@ public class DatabasesUtil {
      * @return the database founded in our list of collection otherwise return new con.
      */
     public DatabaseUtil getDatabase(String dbName) {
-        for(DatabaseUtil db : this.databaes) {
+        for(DatabaseUtil db : this.databases) {
             if(db.getName() == dbName) {
                 return db;
             }
         }
         return new DatabaseUtil();
     }
+
+    public void closeAll(){
+        for(DatabaseUtil db : this.databases)
+            db.close();
+    }
     public void setDatabaes(List<DatabaseUtil> databaes) {
-        this.databaes = databaes;
+        this.databases = databaes;
     }
 
 }

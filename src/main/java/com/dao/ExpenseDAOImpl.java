@@ -65,7 +65,12 @@ public class ExpenseDAOImpl implements ExpenseDAOInterface {
     }
 
     @Override
-    public Expense create(Expense entity) {
+    public Expense create(Expense entity){
         return ExpenseDAOInterface.super.create(entity);
+    }
+
+    public void create(Expense entity, String db) {
+        databasesUtil.getDatabase(db)
+                .executeTransaction(entityManager -> entityManager.persist(entity));
     }
 }
