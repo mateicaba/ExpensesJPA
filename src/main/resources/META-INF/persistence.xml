@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="entertainment" transaction-type="RESOURCE_LOCAL">
+    <!-- Provider Hibernate Core Dependecy -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Register all models -->
+    <properties>
+      <!-- JDBC URL Server:Port/DBName -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5433/entertainment"/>
+
+      <!-- DB Driver -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+      <!-- DB User -->
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+
+      <!-- <property name="hibernate.default_schema" value="public"/>-->
+
+      <!-- DB Pass -->
+      <property name="jakarta.persistence.jdbc.password" value="Xbox360180@"/>
+
+      <!--            Create and initialize the database-->
+      <!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.create-script-source" value="create-db.sql" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.drop-script-source" value="drop-db.sql" />-->
+      <!--            <property name="jakarta.persistence.sql-load-script-source" value="data.sql" />-->
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+      <!-- Show SQL in console-->
+      <property name="hibernate.show_sql" value="true"/>
+
+      <!-- Show SQL formatted -->
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="home" transaction-type="RESOURCE_LOCAL">
+    <!-- Provider Hibernate Core Dependecy -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Register all models -->
+    <properties>
+      <!-- JDBC URL Server:Port/DBName -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5433/home"/>
+
+      <!-- DB Driver -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+      <!-- DB User -->
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+
+      <!-- <property name="hibernate.default_schema" value="public"/>-->
+
+      <!-- DB Pass -->
+      <property name="jakarta.persistence.jdbc.password" value="Xbox360180@"/>
+
+      <!--            Create and initialize the database-->
+      <!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.create-script-source" value="create-db.sql" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.drop-script-source" value="drop-db.sql" />-->
+      <!--            <property name="jakarta.persistence.sql-load-script-source" value="data.sql" />-->
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+      <!-- Show SQL in console-->
+      <property name="hibernate.show_sql" value="true"/>
+
+      <!-- Show SQL formatted -->
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="food" transaction-type="RESOURCE_LOCAL">
+    <!-- Provider Hibernate Core Dependecy -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Register all models -->
+    <properties>
+      <!-- JDBC URL Server:Port/DBName -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5433/food"/>
+
+      <!-- DB Driver -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+      <!-- DB User -->
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+
+      <!-- <property name="hibernate.default_schema" value="public"/>-->
+
+      <!-- DB Pass -->
+      <property name="jakarta.persistence.jdbc.password" value="Xbox360180@"/>
+
+      <!--            Create and initialize the database-->
+      <!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.create-script-source" value="create-db.sql" />-->
+      <!--            <property name="jakarta.persistence.schema-generation.drop-script-source" value="drop-db.sql" />-->
+      <!--            <property name="jakarta.persistence.sql-load-script-source" value="data.sql" />-->
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+      <!-- Show SQL in console-->
+      <property name="hibernate.show_sql" value="true"/>
+
+      <!-- Show SQL formatted -->
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
